@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6048899B3E4A9E2963C34A7610E055D72A135E6B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6048899B3E4A9E2963C34A7610E055D72A135E6B" : 9223372036854775807,
+    "9651177CB4AEDBAEFF9C41FA7E5936FF8A860C03" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2E5C9882-7E19-416F-9D47-16ADF7060E59",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6048899B3E4A9E2963C34A7610E055D72A135E6B" : "Spirograph\/",
+    "9651177CB4AEDBAEFF9C41FA7E5936FF8A860C03" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Spirograph",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Spirograph.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/becarefullee\/Spirograph.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6048899B3E4A9E2963C34A7610E055D72A135E6B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/becarefullee\/Spirograph",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9651177CB4AEDBAEFF9C41FA7E5936FF8A860C03"
+    }
+  ]
+}
