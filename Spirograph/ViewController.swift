@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var CanvasView: Canvas!
 
   @IBAction func swipeHappend(_ sender: UISwipeGestureRecognizer) {
+    pointArray.removeAll()
     theta = 0
     r_max = Double(arc4random_uniform(140)) + 0
     r_min = Double(arc4random_uniform(140)) + 0
@@ -46,16 +47,21 @@ class ViewController: UIViewController {
   
   
   func sendPointToCanvasView() {
-    CanvasView.endPoint = calculateThePoint(r_max: r_max, r_min: r_min, r_inter: r_inter, theta: theta)
-    CanvasView.redraw()
+    pointArray.append(calculateThePoint(r_max: r_max, r_min: r_min, r_inter: r_inter, theta: theta))
+//    CanvasView.endPoint = calculateThePoint(r_max: r_max, r_min: r_min, r_inter: r_inter, theta: theta)
+//    CanvasView.redraw()
     theta = theta + delta
   }
   
   func refresh() {
-    CanvasView.setNeedsDisplay()
+    CanvasView.points = pointArray
+    CanvasView.redraw()
+    let lastPoint: CGPoint = pointArray.last!
+    pointArray = [lastPoint]
   }
 
   @IBAction func R_MaxSliderChanged(_ sender: UISlider) {
+    pointArray.removeAll()
     CanvasView.clear()
     theta = 0
     if sender.value > 0.5 {
@@ -66,6 +72,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func R_MinSliderChanged(_ sender: UISlider) {
+    pointArray.removeAll()
     CanvasView.clear()
     theta = 0
     if sender.value > 0.5{
@@ -77,6 +84,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func R_InterSliderChanged(_ sender: UISlider) {
+    pointArray.removeAll()
     CanvasView.clear()
     theta = 0
     if sender.value > 0.5{
@@ -107,10 +115,8 @@ class ViewController: UIViewController {
   }
   
   override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-        
-    timer = Timer.scheduledTimer(timeInterval: 0.0001,target:self,selector:#selector(ViewController.sendPointToCanvasView),userInfo:nil,repeats:true)
+    super.viewDidLoad()        
+    timer = Timer.scheduledTimer(timeInterval: 0.001,target:self,selector:#selector(ViewController.sendPointToCanvasView),userInfo:nil,repeats:true)
 
     refreshTimer = Timer.scheduledTimer(timeInterval: 0.05,target:self,selector:#selector(ViewController.refresh),userInfo:nil,repeats:true)
   }

@@ -12,12 +12,14 @@ import UIKit
 
 class Canvas: UIView {
 
+  var points: [CGPoint] = []
+  
   var startPoint: CGPoint!
   var endPoint: CGPoint!
   var preRenderedImage: UIImage!
   var bezierPath: UIBezierPath!
   
-  var pointLimit: Int = 1024
+  var pointLimit: Int = 8
   var pointCount: Int = 0
   
   var lineWidth: CGFloat = 1
@@ -47,20 +49,31 @@ class Canvas: UIView {
   
   
   func redraw() {
-    bezierPath.move(to: startPoint)
-    bezierPath.addLine(to: endPoint)
-    startPoint = endPoint
-    pointCount += 1
-    
-    if pointCount == pointLimit {
-      pointCount = 0
-      renderToImage()
-      setNeedsDisplay()
-      bezierPath.removeAllPoints()
-    } else {
-      setNeedsDisplay()
+    bezierPath.move(to: points[0])
+    for i in 0..<points.count {
+      bezierPath.addLine(to: points[i])
     }
+    renderToImage()
+    setNeedsDisplay()
+    bezierPath.removeAllPoints()
   }
+  
+//  func redraw() {
+//    bezierPath.move(to: startPoint)
+//    bezierPath.addLine(to: endPoint)
+//    startPoint = endPoint
+//    pointCount += 1
+//
+//    if pointCount == pointLimit {
+//      pointCount = 0
+//      renderToImage()
+//      setNeedsDisplay()
+//      bezierPath.removeAllPoints()
+//      print("cached")
+//    } else {
+//      setNeedsDisplay()
+//    }
+//  }
     
     
   override func draw(_ rect: CGRect) {
