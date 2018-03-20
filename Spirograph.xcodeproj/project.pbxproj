@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09C4B02D2060166700592165 /* SpirographAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4B02C2060166700592165 /* SpirographAnimator.swift */; };
 		1828D1341D8F43CB00D8A953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828D12D1D8F43CB00D8A953 /* AppDelegate.swift */; };
 		1828D1351D8F43CB00D8A953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828D12E1D8F43CB00D8A953 /* ViewController.swift */; };
 		1828D1361D8F43CB00D8A953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1828D12F1D8F43CB00D8A953 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09C4B02C2060166700592165 /* SpirographAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographAnimator.swift; sourceTree = "<group>"; };
 		1828D1181D8F439600D8A953 /* Spirograph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spirograph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1828D12D1D8F43CB00D8A953 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1828D12E1D8F43CB00D8A953 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				1828D12D1D8F43CB00D8A953 /* AppDelegate.swift */,
-				1828D12E1D8F43CB00D8A953 /* ViewController.swift */,
-				1828D12F1D8F43CB00D8A953 /* Main.storyboard */,
 				1828D1301D8F43CB00D8A953 /* Canvas.swift */,
+				1828D12E1D8F43CB00D8A953 /* ViewController.swift */,
+				09C4B02C2060166700592165 /* SpirographAnimator.swift */,
+				1828D12F1D8F43CB00D8A953 /* Main.storyboard */,
 				1828D1311D8F43CB00D8A953 /* Assets.xcassets */,
 				1828D1321D8F43CB00D8A953 /* LaunchScreen.storyboard */,
 				1828D1331D8F43CB00D8A953 /* Info.plist */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1828D1351D8F43CB00D8A953 /* ViewController.swift in Sources */,
+				09C4B02D2060166700592165 /* SpirographAnimator.swift in Sources */,
 				1828D1341D8F43CB00D8A953 /* AppDelegate.swift in Sources */,
 				1828D1371D8F43CB00D8A953 /* Canvas.swift in Sources */,
 			);
@@ -295,6 +299,7 @@
 				1828D12C1D8F439900D8A953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
